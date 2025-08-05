@@ -1,0 +1,12 @@
+getgenv().identifyexecutor = function()
+    return "EclipseWare"
+end
+
+function request()
+    return {
+        StatusCode = 200,
+        Body = game:GetService("HttpService"):JSONEncode({
+            ["user-agent"] = "EclipseWare v1 | 1.0.0 Roblox Windows"
+        })
+    }
+end
